@@ -1,59 +1,110 @@
 <!DOCTYPE html>
 <html lang="fi">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=2.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css">
 <head>
-  <title>One way to Australia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>One Way to Australia | Etusivu</title>
+
+<meta name="description" content="Vinkkejä ja tietoa Australiaan matkustamiseen. Mitä tietää ennen lähtöä.">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header class="header">
-  <img src="logo.png" alt="logo" class="logo" style="max-width:180px; margin:left;"> 
 
-  <nav class="ylanavikko">
-    <ul>
-    <li><a href="mita-tietaa-ennen.html">Mitä tietää ennen</a></li>
-   <li><a href="kulttuurierot.html">Kulttuurierot</a></li>
+<div class="logo">
+<img src="logo.png" alt="One Way to Australia logo">
+</div>
 
-    </ul>
-    </nav>
+<button class="menu-btn" id="menu-btn">☰</button>
+
+<nav class="nav" id="nav">
+
+<ul>
+
+<li><a href="mita-tietaa-ennen.html">Mitä tietää ennen</a></li>
+
+<li><a href="kulttuurierot.html">Kulttuurierot</a></li>
+
+</ul>
+
+</nav>
+
 </header>
 
-  <section class="hero">
-    <h1>One way to Australia</h1>
-    <p>Mitä olisin halunnut tietää ennen Australiaan lähtöä</p>
-    <a href="mita-tietaa-ennen.html" class="btn">Aloita tästä</a> 
 
-  <section class="gallery">
+<main>
+
+<section class="hero">
+
+<h1>One Way to Australia</h1>
+
+<p>Mitä olisin halunnut tietää ennen Australiaan lähtöä</p>
+
+<a class="btn" href="mita-tietaa-ennen.html">Aloita tästä</a>
+
+</section>
+
+
+<section class="gallery">
 
 <div class="image-grid">
 
-<img src="aus.png" alt="kuva 1">
-<img src="palmut.png" alt="kuva 2">
-<img src="kaupunki.png" alt="kuva 3">
-<img src="sydney.png" alt="kuva 4">
+<img src="aus.png" alt="Australia maisema">
+<img src="palmut.png" alt="Palmuranta">
+<img src="kaupunki.png" alt="Australian kaupunki">
+<img src="sydney.png" alt="Sydney oopperatalo">
 
 </div>
 
 </section>
 
 
-  <section class="newsletter">
-    <h3>Tilaa uutiskirje</h3>
-    <p>Saat vinkkejä ja kokemuksia suoraan sähköpostiisi</p>
+<section class="newsletter">
 
-    <form>
-      <input type="text" placeholder="Nimi" required>
-      <input type="email" placeholder="Sähköposti" required>
-      <button type="submit">Tilaa</button>
-    </form>
-  </section>
+<h2>Tilaa uutiskirje</h2>
 
-  <footer>
-    © 2026 One Way to Australia |
-  </footer>
+<p>Saat vinkkejä suoraan sähköpostiisi</p>
+
+<form>
+
+<label for="nimi">Nimi</label>
+<input id="nimi" type="text" required>
+
+<label for="email">Sähköposti</label>
+<input id="email" type="email" required>
+
+<button type="submit">Tilaa</button>
+
+</form>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>© 2026 One Way to Australia</p>
+
+</footer>
+
+
+<script>
+
+const menuBtn = document.getElementById("menu-btn")
+const nav = document.getElementById("nav")
+
+menuBtn.addEventListener("click", () => {
+nav.classList.toggle("open")
+})
+
+</script>
 
 </body>
 </html>
